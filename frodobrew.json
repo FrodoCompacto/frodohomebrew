@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "_meta": {
+    "sources": [
+      {
+        "json": "Frodobrew",
+        "abbreviation": "FrdB",
+        "full": "Frodo Homebrew",
+        "authors": ["Frodo"],
+        "version": "2024.11.22",
+        "url": "https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa"
+      }
+    ],
+    "dateAdded": 1732281600,
+    "dateLastModified": 1732281600,
+    "_dateLastModifiedHash": "abc123def456",
+    "edition": "classic"
+  },
+  "monster": [
+    {
+      "name": "Twilight Chimera",
+      "source": "Frodobrew",
+      "size": "Large",
+      "type": "Ethereal",
+      "alignment": ["N", "E"],
+      "ac": [
+        {
+          "ac": 16,
+          "from": ["Ethereal Hide"]
+        }
+      ],
+      "hp": {
+        "average": 114,
+        "formula": "12d10 + 48"
+      },
+      "speed": {
+        "walk": 40,
+        "fly": 30
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 18,
+      "int": 6,
+      "wis": 12,
+      "cha": 10,
+      "save": {
+        "str": "+7",
+        "con": "+7",
+        "wis": "+4"
+      },
+      "resist": [
+        "slashing",
+        "piercing",
+        "bludgeoning"
+      ],
+      "immune": ["necrotic", "poison"],
+      "conditionImmune": ["{@condition poisoned}", "{@condition paralyzed}"],
+      "vulnerable": ["radiant"],
+      "languages": ["Understands Abyssal but cannot speak"],
+      "passive": 11,
+      "cr": "6",
+      "trait": [
+        {
+          "name": "Ethereal Form",
+          "entries": [
+            "The Twilight Chimera has resistance to all physical damage (except radiant) while on the Material Plane. Attacks against it are made with disadvantage unless the attacker can see ethereal creatures."
+          ]
+        },
+        {
+          "name": "Mistfire Glow",
+          "entries": [
+            "The Chimera radiates a pulsing shadowy aura up to 15 feet. Any hostile creature that starts its turn in the area must succeed on a {@dc 14} Wisdom saving throw or become {@condition frightened} for 1 minute. The creature can repeat the saving throw at the end of each of its turns."
+          ]
+        },
+        {
+          "name": "Multiple Heads",
+          "entries": [
+            "The Twilight Chimera has three independent heads, each with unique abilities:",
+            "- {@b Lion:} Emits a spectral blue flame. Its bite attacks deal additional fire damage.",
+            "- {@b Serpent:} Its gaze forces a creature to make a {@dc 14} Wisdom saving throw or become {@condition confused} until the end of its next turn.",
+            "- {@b Eagle:} Its screech disorients enemies in a 15-foot cone."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The Twilight Chimera makes three attacks: one bite, one headbutt, and one claw attack."
+          ]
+        },
+        {
+          "name": "Bite (Lion Head)",
+          "entries": [
+            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 4}) piercing damage plus 5 ({@damage 1d10}) spectral fire damage."
+          ]
+        },
+        {
+          "name": "Headbutt (Eagle Head)",
+          "entries": [
+            "{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d6 + 4}) bludgeoning damage. The target must succeed on a {@dc 14} Strength saving throw or be pushed 10 feet."
+          ]
+        },
+        {
+          "name": "Claws",
+          "entries": [
+            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 4}) slashing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Instinctive Strike",
+          "entries": [
+            "When the Chimera takes damage from a melee attack within 5 feet, it can use its reaction to make a bite attack against the attacker."
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Shadow Dash",
+          "entries": [
+            "The Chimera moves up to half its speed without provoking opportunity attacks."
+          ]
+        }
+      ],
+      "environment": ["Aether Sea"],
+      "tokenUrl": "https://i.imgur.com/xkrkXze.png"
+    }
+  ],
+  "info": [
+    {
+      "name": "Twilight Chimera Details",
+      "source": "Frodobrew",
+      "url": "https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa"
+    }
+  ]
+}
