@@ -141,12 +141,12 @@
 				}
 			],
 			"trait": [
-			  {
-				"name": "Ficha Estilizada",
-				"entries": [
-				  "Confira a ficha estilizada completa da {@link Quimera Crepuscular|https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa}."
-				]
-			  }
+				{
+					"name": "Ficha Estilizada",
+					"entries": [
+						"Confira a ficha estilizada completa da {@link Quimera Crepuscular|https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa}."
+					]
+				}
 			],
 			"environment": [
 				"Aether Sea"
@@ -493,6 +493,135 @@
 			"savingThrowForcedSpell": [
 				"dexterity",
 				"wisdom"
+			]
+		},
+		{
+			"name": "Announcer",
+			"source": "Frodobrew",
+			"size": "Medium",
+			"type": "Humanoid",
+			"alignment": [
+				"Lawful Evil"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"Scale Mail",
+						"Shield"
+					]
+				}
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 12,
+			"int": 16,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"int": "+5",
+				"wis": "+3"
+			},
+			"skills": [
+				"Investigation +5",
+				"Perception +3"
+			],
+			"senses": [
+				"Darkvision 60 ft.",
+				"Passive Perception 13"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Abyssal"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Expert Alchemist",
+					"entries": [
+						"The agent can create three potions per day of common or uncommon rarity. They carry them and use the potions before and during combat."
+					]
+				},
+				{
+					"name": "Favoured by Thoth-Hermes (1/day)",
+					"entries": [
+						"The agent of the order invokes the name of their deity as a bonus action. The agent becomes invisible and immune to nonmagical weapon damage until the end of their next turn."
+					]
+				},
+				{
+					"name": "Student of the Spirit",
+					"entries": [
+						"The agent has studied spiritual treatises from the Emerald Tablets, granting them the ability to commune with spirits. They can cast Speak with Dead three times per day."
+					]
+				},
+				{
+					"name": "Appearance",
+					"entries": [
+						"The Announcer wears a metal mask and green robes. They carry a staff that emits a faint green glow."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The agent of the order makes two staff attacks."
+					]
+				},
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) bludgeoning damage. If the agent drinks a potion of hill giant strength, the attack bonus becomes +7 and damage becomes 9 ({@damage 1d8 + 5}) bludgeoning."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Sixth Sense (Recharge 5-6)",
+					"entries": [
+						"The agent of the order allows themself to be guided by the spirit world, granting advantage on their next attack roll, saving throw, or ability check."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Announcer is a 3rd-level spellcaster. Their spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). They have the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell thaumaturgy}",
+								"{@spell light}"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell fog cloud}",
+								"{@spell hold person}"
+							]
+						}
+					}
+				}
+			],
+			"environment": [
+				"Underground",
+				"Temples"
 			]
 		}
 	]
