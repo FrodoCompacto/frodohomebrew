@@ -1,138 +1,499 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "_meta": {
-    "sources": [
-      {
-        "json": "Frodobrew",
-        "abbreviation": "FrdB",
-        "full": "Frodo Homebrew",
-        "authors": ["Frodo"],
-        "version": "2024.11.22",
-        "url": "https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa"
-      }
-    ],
-    "dateAdded": 1732281600,
-    "dateLastModified": 1732281600,
-    "_dateLastModifiedHash": "abc123def456",
-    "edition": "classic"
-  },
-  "monster": [
-    {
-      "name": "Twilight Chimera",
-      "source": "Frodobrew",
-      "size": "Large",
-      "type": "Ethereal",
-      "alignment": ["N", "E"],
-      "ac": [
-        {
-          "ac": 16,
-          "from": ["Ethereal Hide"]
-        }
-      ],
-      "hp": {
-        "average": 114,
-        "formula": "12d10 + 48"
-      },
-      "speed": {
-        "walk": 40,
-        "fly": 30
-      },
-      "str": 18,
-      "dex": 14,
-      "con": 18,
-      "int": 6,
-      "wis": 12,
-      "cha": 10,
-      "save": {
-        "str": "+7",
-        "con": "+7",
-        "wis": "+4"
-      },
-      "resist": [
-        "slashing",
-        "piercing",
-        "bludgeoning"
-      ],
-      "immune": ["necrotic", "poison"],
-      "conditionImmune": ["{@condition poisoned}", "{@condition paralyzed}"],
-      "vulnerable": ["radiant"],
-      "languages": ["Understands Abyssal but cannot speak"],
-      "passive": 11,
-      "cr": "6",
-      "trait": [
-        {
-          "name": "Ethereal Form",
-          "entries": [
-            "The Twilight Chimera has resistance to all physical damage (except radiant) while on the Material Plane. Attacks against it are made with disadvantage unless the attacker can see ethereal creatures."
-          ]
-        },
-        {
-          "name": "Mistfire Glow",
-          "entries": [
-            "The Chimera radiates a pulsing shadowy aura up to 15 feet. Any hostile creature that starts its turn in the area must succeed on a {@dc 14} Wisdom saving throw or become {@condition frightened} for 1 minute. The creature can repeat the saving throw at the end of each of its turns."
-          ]
-        },
-        {
-          "name": "Multiple Heads",
-          "entries": [
-            "The Twilight Chimera has three independent heads, each with unique abilities:",
-            "- {@b Lion:} Emits a spectral blue flame. Its bite attacks deal additional fire damage.",
-            "- {@b Serpent:} Its gaze forces a creature to make a {@dc 14} Wisdom saving throw or become {@condition confused} until the end of its next turn.",
-            "- {@b Eagle:} Its screech disorients enemies in a 15-foot cone."
-          ]
-        }
-      ],
-      "action": [
-        {
-          "name": "Multiattack",
-          "entries": [
-            "The Twilight Chimera makes three attacks: one bite, one headbutt, and one claw attack."
-          ]
-        },
-        {
-          "name": "Bite (Lion Head)",
-          "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 4}) piercing damage plus 5 ({@damage 1d10}) spectral fire damage."
-          ]
-        },
-        {
-          "name": "Headbutt (Eagle Head)",
-          "entries": [
-            "{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d6 + 4}) bludgeoning damage. The target must succeed on a {@dc 14} Strength saving throw or be pushed 10 feet."
-          ]
-        },
-        {
-          "name": "Claws",
-          "entries": [
-            "{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 4}) slashing damage."
-          ]
-        }
-      ],
-      "reaction": [
-        {
-          "name": "Instinctive Strike",
-          "entries": [
-            "When the Chimera takes damage from a melee attack within 5 feet, it can use its reaction to make a bite attack against the attacker."
-          ]
-        }
-      ],
-      "legendary": [
-        {
-          "name": "Shadow Dash",
-          "entries": [
-            "The Chimera moves up to half its speed without provoking opportunity attacks."
-          ]
-        }
-      ],
-      "environment": ["Aether Sea"],
-      "tokenUrl": "https://i.imgur.com/xkrkXze.png"
-    }
-  ],
-  "info": [
-    {
-      "name": "Twilight Chimera Details",
-      "source": "Frodobrew",
-      "url": "https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa"
-    }
-  ]
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"_meta": {
+		"sources": [
+			{
+				"json": "Frodobrew",
+				"abbreviation": "FrdB",
+				"full": "Frodo Homebrew",
+				"authors": [
+					"Frodo"
+				],
+				"version": "2024.11.22",
+				"url": "https://x.com/otaldofrodo"
+			}
+		],
+		"dateAdded": 1732281600,
+		"dateLastModified": 1732281600,
+		"edition": "classic"
+	},
+	"monster": [
+		{
+			"name": "Twilight Chimera",
+			"source": "Frodobrew",
+			"size": "Large",
+			"type": "Ethereal",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"Ethereal Hide"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 6,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"str": "+7",
+				"con": "+7",
+				"wis": "+4"
+			},
+			"resist": [
+				"slashing",
+				"piercing",
+				"bludgeoning"
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned",
+				"paralyzed"
+			],
+			"vulnerable": [
+				"radiant"
+			],
+			"languages": [
+				"Understands Abyssal but cannot speak"
+			],
+			"passive": 11,
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Ethereal Form",
+					"entries": [
+						"The Twilight Chimera has resistance to all physical damage (except radiant) while on the Material Plane. Attacks against it are made with disadvantage unless the attacker can see ethereal creatures."
+					]
+				},
+				{
+					"name": "Mistfire Glow",
+					"entries": [
+						"The Chimera radiates a pulsing shadowy aura up to 15 feet. Any hostile creature that starts its turn in the area must succeed on a {@dc 14} Wisdom saving throw or become {@condition frightened} for 1 minute. The creature can repeat the saving throw at the end of each of its turns."
+					]
+				},
+				{
+					"name": "Multiple Heads",
+					"entries": [
+						"The Twilight Chimera has three independent heads, each with unique abilities:",
+						"- {@b Lion:} Emits a spectral blue flame. Its bite attacks deal additional fire damage.",
+						"- {@b Serpent:} Its gaze forces a creature to make a {@dc 14} Wisdom saving throw or become {@condition confused} until the end of its next turn.",
+						"- {@b Eagle:} Its screech disorients enemies in a 15-foot cone."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Twilight Chimera makes three attacks: one bite, one headbutt, and one claw attack."
+					]
+				},
+				{
+					"name": "Bite (Lion Head)",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 4}) piercing damage plus 5 ({@damage 1d10}) spectral fire damage."
+					]
+				},
+				{
+					"name": "Headbutt (Eagle Head)",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d6 + 4}) bludgeoning damage. The target must succeed on a {@dc 14} Strength saving throw or be pushed 10 feet."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}14 ({@damage 2d8 + 4}) slashing damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Instinctive Strike",
+					"entries": [
+						"When the Chimera takes damage from a melee attack within 5 feet, it can use its reaction to make a bite attack against the attacker."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Shadow Dash",
+					"entries": [
+						"The Chimera moves up to half its speed without provoking opportunity attacks."
+					]
+				}
+			],
+			"trait": [
+			  {
+				"name": "Ficha Estilizada",
+				"entries": [
+				  "Confira a ficha estilizada completa da {@link Quimera Crepuscular|https://homebrewery.naturalcrit.com/share/tu1h1yguKbxa}."
+				]
+			  }
+			],
+			"environment": [
+				"Aether Sea"
+			],
+			"tokenUrl": "https://i.imgur.com/xkrkXze.png"
+		},
+		{
+			"name": "Torak, Guardian of Instinct",
+			"source": "Frodobrew",
+			"size": [
+				"M"
+			],
+			"type": "Construct",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"unarmored defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 14,
+			"int": 10,
+			"wis": 16,
+			"cha": 12,
+			"save": {
+				"dex": "+7",
+				"wis": "+6"
+			},
+			"skills": {
+				"acrobatics": "+7",
+				"insight": "+6",
+				"perception": "+6"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"immune": [],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Unshakable Will",
+					"entries": [
+						"Torak has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"If Torak is subjected to an effect that allows him to make a Dexterity saving throw to take only half damage, he instead takes no damage if he succeeds on the saving throw, and only half damage if he fails."
+					]
+				},
+				{
+					"name": "Instinctive Reflex",
+					"entries": [
+						"Torak can take the Dodge action as a bonus action on his turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Torak makes two attacks with his staff or unarmed strikes."
+					]
+				},
+				{
+					"name": "Staff Strike",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage, or 9 ({@damage 1d10 + 4}) if used with two hands."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 4}) bludgeoning damage. If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be pushed 10 feet away."
+					]
+				},
+				{
+					"name": "Ki Wave (Recharge 5-6)",
+					"entries": [
+						"Torak releases a burst of ki energy in a 15-foot cone. Each creature in the area must make a {@dc 14} Dexterity saving throw, taking 18 ({@damage 4d8}) force damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Step of the Wind",
+					"entries": [
+						"Torak can Dash or Disengage as a bonus action."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Deflect Missiles",
+					"entries": [
+						"When Torak is hit by a ranged weapon attack, he can reduce the damage by 10 ({@damage 1d10 + 5}). If the damage is reduced to 0, he can catch the projectile if it is small enough to hold in one hand."
+					]
+				}
+			],
+			"traitTags": [
+				"Unshakable Will",
+				"Evasion",
+				"Instinctive Reflex"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasFluffImages": false,
+			"environment": [
+				"dungeon"
+			],
+			"fluff": {
+				"name": "Torak, Guardian of Instinct",
+				"source": "Frodobrew",
+				"entries": [
+					"Torak is a disciplined warrior who channels his instincts through years of rigorous training. He guards ancient secrets in a remote monastery, protecting them from those who seek power for malicious purposes. Torak's style combines precise strikes with a deep understanding of his opponents' movements, making him a fearsome adversary in combat.",
+					"{@b Goals} Torak seeks balance in all things, viewing himself as a protector of harmony. He is a steadfast ally to those who share his values, but he is unyielding against those who threaten the peace."
+				]
+			}
+		},
+		{
+			"name": "Arista, Guardian of Reason",
+			"source": "Frodobrew",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "Construct"
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 13,
+			"int": 18,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"insight": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"any four languages"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Arista is a 7th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). She has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell detect magic}",
+								"{@spell disguise self}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell phantasmal force}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell major image}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell phantasmal killer}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*Illusion spell of 1st level or higher"
+					],
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Crystalline Logic",
+					"entries": [
+						"Arista can use her reaction to impose disadvantage on a saving throw against an enchantment or illusion spell she casts."
+					]
+				},
+				{
+					"name": "Runic Glow",
+					"entries": [
+						"The runes on Arista's body glow softly, shedding dim light in a 10-foot radius. She can suppress or reactivate this light as a bonus action."
+					]
+				},
+				{
+					"name": "Ethereal Tome",
+					"entries": [
+						"A magical book floats in front of Arista, assisting her in combat. The tome can fire magical projectiles using her spell attack bonus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Arista makes two attacks with her Tome Strike."
+					]
+				},
+				{
+					"name": "Tome Strike",
+					"entries": [
+						"{@atk rw} {@hit 6} to hit, range 60 ft., one target. {@h}10 ({@damage 2d6 + 3}) force damage."
+					]
+				},
+				{
+					"name": "Illusory Barrage (Recharge 5-6)",
+					"entries": [
+						"Arista conjures a flurry of illusions in a 15-foot cone. Each creature in the area must make a {@dc 14} Wisdom saving throw. On a failed save, a creature takes 21 ({@damage 6d6}) psychic damage and is {@condition blinded} until the end of its next turn. On a successful save, the creature takes half as much damage and is not blinded."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Misty Retreat",
+					"entries": [
+						"Arista can cast {@spell misty step} as a bonus action without expending a spell slot. She can use this ability once per short or long rest."
+					]
+				}
+			],
+			"environment": [
+				"dungeon"
+			],
+			"fluff": {
+				"name": "Arista, Guardian of Reason",
+				"source": "Frodobrew",
+				"entries": [
+					"Arista is a serene and composed figure, embodying the ideal of reason and logic. Her glowing runes symbolize her unwavering dedication to truth and clarity. Her tome, an extension of her will, serves as both a weapon and a tool for enlightenment.",
+					"{@b Goals} Arista seeks to dispel ignorance and deception, using her abilities to foster understanding and peace."
+				]
+			},
+			"hasFluffImages": false,
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"damageTagsSpell": [
+				"I",
+				"Y",
+				"P"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"frightened"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
+		}
+	]
 }
