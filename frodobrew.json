@@ -777,10 +777,7 @@
     }
   ],
   "environment": ["urban"],
-  "token": {
-    "name": "Dron'dal-re",
-    "source": "Homebrew"
-  }
+  "tokenUrl": "https://i.imgur.com/0kK1D4x.png"
 },
 		{
   "name": "Bicephalous Iron Golem (Bicéfalo de Ferro)",
@@ -905,10 +902,7 @@
   "languageTags": ["CS"],
   "damageTags": ["B"],
   "miscTags": ["MW"],
-  "token": {
-    "name": "Bicephalous Iron Golem (Bicéfalo de Ferro)",
-    "source": "Homebrew"
-  },
+  "tokenUrl": "https://i.imgur.com/z0Arooe.png",
   "fluff": {
     "name": "Bicephalous Iron Golem (Bicéfalo de Ferro)",
     "source": "Homebrew",
@@ -919,4 +913,5 @@
 }
 	]
 }
+
 
