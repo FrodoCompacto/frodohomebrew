@@ -623,6 +623,300 @@
 				"Underground",
 				"Temples"
 			]
-		}
+		},
+		{
+  "name": "Dromdal-re",
+  "source": "Homebrew",
+  "page": 0,
+  "size": ["M"],
+  "type": {
+    "type": "humanoid",
+    "tags": ["corrupted"]
+  },
+  "alignment": ["LE"],
+  "ac": [
+    16,
+    {
+      "ac": 19,
+      "condition": "with {@spell mage armor} and Iron Obsidian Mask",
+      "braces": true
+    }
+  ],
+  "hp": {
+    "average": 142,
+    "formula": "19d8 + 57"
+  },
+  "speed": {
+    "walk": 30
+  },
+  "str": 10,
+  "dex": 14,
+  "con": 16,
+  "int": 18,
+  "wis": 14,
+  "cha": 16,
+  "save": {
+    "int": "+9",
+    "wis": "+6"
+  },
+  "skill": {
+    "arcana": "+12",
+    "religion": "+10",
+    "intimidation": "+10"
+  },
+  "passive": 12,
+  "resist": [
+    {
+      "resist": ["psychic"],
+      "note": "from Iron Obsidian Mask"
+    }
+  ],
+  "languages": [
+    "Common",
+    "Deep Speech",
+    "Abyssal",
+    "Celestial"
+  ],
+  "cr": "9",
+  "spellcasting": [
+    {
+      "name": "Spellcasting",
+      "type": "spellcasting",
+      "headerEntries": [
+        "Dromdal-re is a 13th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 16}, {@hit 8} to hit with spell attacks). He wields esoteric shadow magic granted by the Emerald Tablets."
+      ],
+      "will": [
+        "{@spell disguise self}",
+        "{@spell silence}"
+      ],
+      "spells": {
+        "0": {
+          "spells": [
+            "{@spell chill touch}",
+            "{@spell mage hand}",
+            "{@spell minor illusion}",
+            "{@spell toll the dead}"
+          ]
+        },
+        "1": {
+          "slots": 4,
+          "spells": [
+            "{@spell shield}",
+            "{@spell command}",
+            "{@spell magic missile}",
+            "{@spell detect magic}"
+          ]
+        },
+        "2": {
+          "slots": 3,
+          "spells": [
+            "{@spell hold person}",
+            "{@spell mirror image}",
+            "{@spell misty step}"
+          ]
+        },
+        "3": {
+          "slots": 3,
+          "spells": [
+            "{@spell counterspell}",
+            "{@spell fireball}",
+            "{@spell bestow curse}"
+          ]
+        },
+        "4": {
+          "slots": 3,
+          "spells": [
+            "{@spell dimension door}",
+            "{@spell blight}",
+            "{@spell wall of fire}"
+          ]
+        },
+        "5": {
+          "slots": 2,
+          "spells": [
+            "{@spell dominate person}",
+            "{@spell hold monster}"
+          ]
+        },
+        "6": {
+          "slots": 1,
+          "spells": [
+            "{@spell circle of death}"
+          ]
+        }
+      },
+      "footerEntries": [
+        "*Dromdal casts these spells on himself before combat if he is aware of the threat."
+      ],
+      "ability": "int",
+      "hidden": [
+        "will"
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "name": "Iron Obsidian Mask",
+      "entries": [
+        "While wearing the mask, Dromdal has advantage on Intimidation checks and resistance to psychic damage. Once per day, as a bonus action, he can cast {@spell silence} without components."
+      ]
+    },
+    {
+      "name": "Command Action",
+      "entries": [
+        "Once per round, Dromdal can use a bonus action to command an allied creature (such as the Iron Bicéphale) to use its reaction to move up to half its speed and make a melee attack or attempt to grapple a target."
+      ]
+    }
+  ],
+  "action": [
+    {
+      "name": "Nullifying Touch",
+      "entries": [
+        "{@atk mw,rw} {@hit 8} to hit, reach 5 ft. or range 60 ft., one target. {@h}9 ({@damage 2d8}) necrotic damage. If the attack hits, the target can't benefit from damage resistance caused by magic until the end of Dron'dal's next turn."
+      ]
+    }
+  ],
+  "environment": ["urban"],
+  "token": {
+    "name": "Dron'dal-re",
+    "source": "Homebrew"
+  }
+},
+		{
+  "name": "Bicephalous Iron Golem (Bicéfalo de Ferro)",
+  "source": "Homebrew",
+  "page": 0,
+  "size": ["L"],
+  "type": "construct",
+  "alignment": ["U"],
+  "ac": [
+    { "ac": 18, "from": ["natural armor"] }
+  ],
+  "hp": {
+    "average": 198,
+    "formula": "16d10 + 96"
+  },
+  "speed": { "walk": 40 },
+  "str": 20,
+  "dex": 8,
+  "con": 22,
+  "int": 3,
+  "wis": 10,
+  "cha": 5,
+  "senses": ["darkvision 120 ft."],
+  "passive": 10,
+  "immune": [
+    "poison",
+    "psychic",
+    {
+      "immune": ["bludgeoning", "piercing", "slashing"],
+      "note": "from nonmagical attacks that aren't adamantine",
+      "cond": true
+    }
+  ],
+  "conditionImmune": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "stunned",
+    "unconscious"
+  ],
+  "languages": ["understands the languages of its creator but can't speak"],
+  "cr": "10",
+  "trait": [
+    {
+      "name": "Immutable Form",
+      "entries": [
+        "The golem is immune to any spell or effect that would alter its form."
+      ]
+    },
+    {
+      "name": "Anti-Magic Bastion",
+      "entries": [
+        "The golem is unaffected by spells of 6th level or lower (including spell attacks and magical effects from such spells). Spells of 7th level or higher affect it normally. Magical effects from magic items still function unless they replicate a spell of 6th level or lower."
+      ]
+    },
+    {
+      "name": "Magic Weapons",
+      "entries": [
+        "The golem's weapon attacks are magical."
+      ]
+    },
+    {
+      "name": "Two Heads, Six Arms",
+      "entries": [
+        "The golem can take up to two reactions per round, but no more than one per triggering event."
+      ]
+    },
+    {
+      "name": "Juggernaut Protocol",
+      "entries": [
+        "The golem has advantage on Strength (Athletics) checks to shove or grapple, and creatures it is grappling are restrained instead of grappled."
+      ]
+    }
+  ],
+  "action": [
+    {
+      "name": "Multiattack",
+      "entries": [
+        "The golem makes three Slam attacks. If at least two Slams hit the same target on its turn, the target must succeed on a DC 16 Strength saving throw or is knocked prone and grappled (escape DC 16). While grappled this way, the target is restrained."
+      ]
+    },
+    {
+      "name": "Slam",
+      "entries": [
+        "{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}16 ({@damage 2d10 + 5}) bludgeoning damage."
+      ]
+    },
+    {
+      "name": "Seismic Stomp {@recharge 5}",
+      "entries": [
+        "The golem slams the ground, creating a shockwave in a 15-foot radius. Each creature in the area must make a {@dc 16} Dexterity saving throw, taking {@damage 2d10} bludgeoning damage on a failed save, or half as much damage on a success. On a failed save, a creature is also pushed 10 feet away from the golem and knocked prone."
+      ]
+    }
+  ],
+  "reaction": [
+    {
+      "name": "Shoulder Shield",
+      "entries": [
+        "When a creature the golem can see hits it with a melee attack, the golem reduces the damage by {@damage 1d8 + 5}."
+      ]
+    },
+    {
+      "name": "Body-Block",
+      "entries": [
+        "When a creature the golem can see moves within 5 feet of the golem, the golem can make a shove against that creature. On a success, the creature's speed becomes 0 until the end of its turn."
+      ]
+    }
+  ],
+  "soundClip": {
+    "type": "external",
+    "url": "https://2014.5e.tools/audio/bestiary/stone-golem.mp3"
+  },
+  "traitTags": [
+    "Immutable Form",
+    "Magic Weapons"
+  ],
+  "senseTags": ["SD"],
+  "actionTags": ["Multiattack"],
+  "languageTags": ["CS"],
+  "damageTags": ["B"],
+  "miscTags": ["MW"],
+  "token": {
+    "name": "Bicephalous Iron Golem (Bicéfalo de Ferro)",
+    "source": "Homebrew"
+  },
+  "fluff": {
+    "name": "Bicephalous Iron Golem (Bicéfalo de Ferro)",
+    "source": "Homebrew",
+    "entries": [
+      "Forged for anti-mage warfare, this towering construct bears two watchful helms and six crushing arms. Its carapace is etched with void-runic seams that swallow lesser spells, and its singular directive is to body-guard its master and deny intruders any path to the objective."
+    ]
+  }
+}
 	]
 }
+
